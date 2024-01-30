@@ -1,0 +1,8 @@
+fake-api:
+  url: https://fakestoreapi.com
+
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enable: true
