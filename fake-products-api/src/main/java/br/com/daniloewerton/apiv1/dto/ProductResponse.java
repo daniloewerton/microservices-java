@@ -1,21 +1,8 @@
 package br.com.daniloewerton.apiv1.dto;
 
 
-import lombok.*;
-
 import java.math.BigDecimal;
 
-@Getter
-@Setter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class ProductResponse {
+public record ProductResponse(String id, String title, BigDecimal price, String category, String description, String image) {
 
-    private Long id;
-    private String title;
-    private BigDecimal price;
-    private String category;
-    private String description;
-    private String image;
 }

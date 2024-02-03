@@ -1,7 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/productsapi
+    username: productsapi
+    password: productsapi
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create
+
 fake-api:
   url: https://fakestoreapi.com
 
-spring:
   cloud:
     loadbalancer:
       ribbon:

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: fake-products-api
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: productsapi
+      POSTGRES_USER: productsapi
+      POSTGRES_PASSWORD: productsapi
+    ports:
+      - "5433:5432"
+
+volumes:
+  cache:
+    driver: local
