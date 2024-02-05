@@ -12,6 +12,15 @@ spring:
     hibernate:
       ddl-auto: create
 
+  cloud:
+    openfeign:
+      client:
+        config:
+          products-api:
+            read-timeout: 3000
+            connect-timeout: 5000
+
+
 fake-api:
   url: https://fakestoreapi.com
 
