@@ -14,4 +14,11 @@ public class ControllerAdviceResource {
         return ResponseEntity.status(statusCode)
                 .body(new DefaultException(statusCode, exception.getMessage()));
     }
+
+    @ExceptionHandler(FakeStoreException.class)
+    public ResponseEntity<DefaultException> circuitBreakerExceptionHandler(FakeStoreException exception) {
+        int statusCode = HttpStatus.INTERNAL_SERVER_ERROR.value();
+        return ResponseEntity.status(statusCode)
+                .body(new DefaultException(statusCode, exception.getMessage()));
+    }
 }
